@@ -6,7 +6,7 @@ interface FooterProps{
 }
 
 
-const Footer: FC<FooterProps> = ({orangeWin, yellowWin}) => {
+const Footer: FC<FooterProps> = ({}) => {
 
     return(
         <footer>

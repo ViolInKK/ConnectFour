@@ -1,11 +1,11 @@
-import { FC, useRef } from "react"
+import { FC } from "react"
 import { BoardModel } from "../models/board"
 import Cell from "./Cell"
 import { Colors } from "../models/colors"
-import PlayerTurn from "./PlayerTurn"
 
 
 interface BoardProps{
+    children: React.ReactNode;
     board: BoardModel
     setBoard: (board: BoardModel) => void
     yellowWin: () => void
@@ -18,8 +18,6 @@ interface BoardProps{
 
 
 const Board: FC<BoardProps> = ({board, setBoard, yellowWin, orangeWin, fullBoard, isOrangeTurn, changeIsOrangeTurn}) => {
-
-    // const isOrange = useRef(true)
 
     function addPiece(column: number){
         const newBoard = board.getCopyBoard()
@@ -68,7 +66,6 @@ const Board: FC<BoardProps> = ({board, setBoard, yellowWin, orangeWin, fullBoard
             </div>
             
             )}
-            {/* <PlayerTurn isOrange={isOrange.current}/> */}
         </div>
 
 
